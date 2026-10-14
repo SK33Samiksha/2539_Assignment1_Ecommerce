@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Headphones",
+    "price": 1299,
+    "category": "Electronics",
+    "icon": "🎧",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "price": 2499,
+    "category": "Electronics",
+    "icon": "⌚",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Backpack",
+    "price": 899,
+    "category": "Accessories",
+    "icon": "🎒",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=700&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Sneakers",
+    "price": 1999,
+    "category": "Fashion",
+    "icon": "👟",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Coffee Mug",
+    "price": 349,
+    "category": "Home",
+    "icon": "☕",
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=700&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Laptop Stand",
+    "price": 799,
+    "category": "Accessories",
+    "icon": "💻",
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=700&auto=format&fit=crop&q=80"
+  }
+]

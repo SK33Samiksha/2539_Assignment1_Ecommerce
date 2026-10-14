@@ -1,0 +1,4 @@
+const express=require('express');const db=require('./db');const app=express();app.use(express.json());
+// Simulated checkout. Database transaction ensures cart clearing and order creation happen together.
+app.post('/api/payment',(req,res)=>{try{db.exec('BEGIN IMMEDIATE');const cart=db.prepare('SELECT p.price,c.quantity FROM cart c JOIN products p ON p.id=c.product_id').all();if(!cart.length){db.exec('ROLLBACK');return res.status(400).json({error:'Cart is empty'})}const subtotal=cart.reduce((s,p)=>s+p.price*p.quantity,0);const total=subtotal+(subtotal>=1999?0:99);const result=db.prepare('INSERT INTO orders(total) VALUES(?)').run(total);db.prepare('DELETE FROM cart').run();db.exec('COMMIT');res.json({success:true,orderId:Number(result.lastInsertRowid)})}catch(e){try{db.exec('ROLLBACK')}catch{}res.status(500).json({error:'Payment could not be processed'})}});
+app.listen(4003,()=>console.log('Payment service: 4003'));
